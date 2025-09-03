@@ -81,11 +81,11 @@ body {
   color: var(--white);
 }
 
-.logo-mark {
-  width: 28px;
-  height: 28px;
-  color: #ffffff;
-  filter: drop-shadow(0 2px 8px rgba(255,255,255,0.25));
+.logo {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.15));
 }
 
 .brand {
