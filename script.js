@@ -83,7 +83,7 @@
       const endpoint = "https://script.google.com/macros/s/AKfycbyfhank3mWcEbM97i0aP5ey9yljXwEZ0Nk4pnTHlCXMwoJ91vrJ0Yc038YnPU2jcm3jag/exec";
       
       try {
-        const url = `${endpoint}?email=${encodeURIComponent(value)}&source=coming-soon`;
+        const url = `${endpoint}?email=${encodeURIComponent(value)}&source=deenmate-web`;
         const res = await fetch(url, { method: "GET" });
 
         if (!res.ok) throw new Error("Bad response");
