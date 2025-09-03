@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#5b44ff" />
+    <title>DeenMate — Coming Soon</title>
+    <meta name="description" content="DeenMate — A modern companion for your faith. We're launching soon." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <!-- Decorative background elements -->
+    <div class="bg-gradient" aria-hidden="true"></div>
+    <div class="bg-pattern" aria-hidden="true"></div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cursor" aria-hidden="true"></div>
+
+    <main class="container">
+      <header class="header">
+        <div class="logo-wrap">
+          <div class="logo-mark" aria-hidden="true">
+            <!-- Simple star/rosette mark -->
+            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="DeenMate mark">
+              <g fill="currentColor">
+                <path d="M50 6l8.4 19.9L79 28.5 62.7 43.1 66.8 64 50 53.6 33.2 64l4.1-20.9L21 28.5l20.6-1.6L50 6z" opacity="0.9"/>
+                <circle cx="50" cy="50" r="6" />
+              </g>
+            </svg>
+          </div>
+          <span class="brand">DeenMate</span>
+        </div>
+      </header>
+
+      <section class="hero">
+        <h1 class="title">We’re Coming Soon</h1>
+        <p class="tagline">A modern, mindful companion for your daily deen.</p>
+
+        <div class="countdown" id="countdown" hidden>
+          <div class="time"><span id="dd">00</span><label>Days</label></div>
+          <div class="sep">:</div>
+          <div class="time"><span id="hh">00</span><label>Hours</label></div>
+          <div class="sep">:</div>
+          <div class="time"><span id="mm">00</span><label>Minutes</label></div>
+          <div class="sep">:</div>
+          <div class="time"><span id="ss">00</span><label>Seconds</label></div>
+        </div>
+
+        <form class="signup" id="signup" action="#" method="post" novalidate>
+          <label class="visually-hidden" for="email">Email address</label>
+          <input id="email" name="email" type="email" placeholder="Join the waitlist with your email" autocomplete="email" />
+          <button type="submit">Notify Me</button>
+          <p class="helper">No spam. Unsubscribe anytime.</p>
+        </form>
+
+        <nav class="social">
+          <!-- <a href="#" aria-label="Follow on Twitter/X" class="social-link">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3 3h4.7l5.1 7L17.8 3H21l-7.4 9.9L21 21h-4.7l-5.4-7.4L6.1 21H3l7.6-10.2L3 3z"/></svg>
+          </a>
+          <a href="#" aria-label="Follow on Instagram" class="social-link">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm10 2H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm-5 4.5A5.5 5.5 0 1 1 6.5 14 5.5 5.5 0 0 1 12 8.5zm0 2A3.5 3.5 0 1 0 15.5 14 3.5 3.5 0 0 0 12 10.5zM17.75 6a1.25 1.25 0 1 1-1.25 1.25A1.25 1.25 0 0 1 17.75 6z"/></svg>
+          </a> -->
+          <a href="https://linkedin.com/company/deenmate" aria-label="Join on LinkedIn" class="social-link">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.94 8.5V21H3.41V8.5h3.53zM5.17 3a2.06 2.06 0 1 1-.02 4.12A2.06 2.06 0 0 1 5.17 3zM21 13.47V21h-3.52v-6.6c0-1.58-.57-2.66-1.98-2.66-1.08 0-1.73.73-2.02 1.43-.1.25-.13.6-.13.95V21H9.83s.05-10.7 0-11.82h3.52v1.67c.47-.72 1.31-1.75 3.19-1.75 2.33 0 4.46 1.52 4.46 4.37z"/></svg>
+          </a>
+        </nav>
+      </section>
+
+      <footer class="footer">
+        <p>© <span id="year"></span> DeenMate. All rights reserved.</p>
+      </footer>
+    </main>
+
+    <script src="./script.js" defer></script>
+  </body>
+  </html>
+
+

@@ -1,0 +1,283 @@
+/*
+  DeenMate — Coming Soon styles
+  - Modern gradient, subtle Islamic geometric pattern
+  - Responsive layout
+*/
+
+:root {
+  --bg-start: #6a5cff;
+  --bg-end: #2fb2ff;
+  --ink: #0e1320;
+  --ink-2: #111827;
+  --muted: #93a3b8;
+  --surface: rgba(255, 255, 255, 0.08);
+  --surface-2: rgba(255, 255, 255, 0.16);
+  --white: #ffffff;
+  --brand: #6b5cff;
+  --glow: rgba(123, 97, 255, 0.6);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  color: var(--white);
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+  background: radial-gradient(1200px 800px at 30% 20%, rgba(255,255,255,0.1), transparent 60%),
+              linear-gradient(135deg, var(--bg-start), var(--bg-end));
+  overflow-x: hidden;
+}
+
+.bg-gradient {
+  position: fixed;
+  inset: -20% -20% 0 -20%;
+  pointer-events: none;
+  background: radial-gradient(800px 800px at 80% 20%, rgba(255,255,255,0.12), transparent 60%),
+              radial-gradient(1000px 800px at 10% 70%, rgba(255,255,255,0.12), transparent 60%);
+  filter: blur(40px) saturate(140%);
+  opacity: 0.75;
+  z-index: 0;
+}
+
+/* Subtle geometric pattern using conic-gradients (star-like tessellation) */
+.bg-pattern {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    conic-gradient(from 0deg, rgba(255,255,255,0.04) 0 25%, transparent 0 100%) 0 0/40px 40px,
+    conic-gradient(from 90deg, rgba(255,255,255,0.03) 0 25%, transparent 0 100%) 20px 20px/40px 40px;
+  mask-image: radial-gradient(circle at 50% 50%, black 40%, transparent 80%);
+  z-index: 0;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100dvh;
+  width: min(100%, 1120px);
+  margin: 0 auto;
+  padding: 24px clamp(16px, 3vw, 40px);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--white);
+}
+
+.logo-mark {
+  width: 28px;
+  height: 28px;
+  color: #ffffff;
+  filter: drop-shadow(0 2px 8px rgba(255,255,255,0.25));
+}
+
+.brand {
+  font-family: "Cairo", "Inter", system-ui, sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  font-size: 20px;
+}
+
+.hero {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding-top: clamp(24px, 6vh, 80px);
+  padding-bottom: clamp(24px, 10vh, 120px);
+}
+
+.title {
+  font-family: "Cairo", "Inter", system-ui, sans-serif;
+  font-size: clamp(32px, 5vw, 64px);
+  line-height: 1.05;
+  margin: 12px 0 10px;
+  letter-spacing: 0.3px;
+  text-shadow: 0 8px 30px rgba(0,0,0,0.35), 0 2px 8px rgba(0,0,0,0.25);
+}
+
+.tagline {
+  font-size: clamp(16px, 2.2vw, 20px);
+  color: rgba(255,255,255,0.9);
+  margin: 0 0 28px;
+}
+
+.countdown {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--surface);
+  border: 1px solid rgba(255,255,255,0.12);
+  padding: 10px 14px;
+  border-radius: 14px;
+  backdrop-filter: blur(8px) saturate(140%);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.06);
+  margin-bottom: 24px;
+}
+
+.countdown .time {
+  display: grid;
+  gap: 2px;
+}
+
+.countdown .time span {
+  font-variant-numeric: tabular-nums;
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.countdown .time label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  opacity: 0.85;
+}
+
+.countdown .sep {
+  opacity: 0.5;
+  font-weight: 600;
+}
+
+.signup {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+  width: min(720px, 100%);
+  margin: 0 auto;
+  padding: 12px;
+  background: var(--surface);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 16px;
+  backdrop-filter: blur(8px) saturate(140%);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.06);
+}
+
+.signup input {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.15);
+  background: rgba(18, 22, 40, 0.45);
+  color: var(--white);
+  outline: none;
+}
+
+.signup input::placeholder { color: rgba(255,255,255,0.66); }
+
+.signup button {
+  padding: 12px 18px;
+  border-radius: 12px;
+  border: 0;
+  background: linear-gradient(135deg, #ffffff, #d7dbff);
+  color: var(--ink-2);
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 8px 30px rgba(255,255,255,0.22);
+}
+
+.signup .helper {
+  grid-column: 1 / -1;
+  margin: 0;
+  text-align: left;
+  font-size: 12px;
+  opacity: 0.85;
+  padding-left: 6px;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.social-link {
+  width: 40px;
+  height: 40px;
+  display: inline-grid;
+  place-items: center;
+  color: white;
+  background: var(--surface);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 12px;
+  transition: transform 180ms ease, background 180ms ease, box-shadow 180ms ease;
+}
+
+.social-link:hover { transform: translateY(-2px) scale(1.04); background: var(--surface-2); box-shadow: 0 10px 30px rgba(0,0,0,0.25); }
+
+.footer {
+  display: grid;
+  place-items: center;
+  padding: 24px 0 8px;
+  color: rgba(255,255,255,0.9);
+  font-size: 13px;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+}
+
+/* Custom cursor */
+.cursor {
+  position: fixed;
+  top: 0; left: 0;
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #fff 0%, #c9c2ff 60%, transparent 70%);
+  box-shadow: 0 0 18px 10px var(--glow);
+  pointer-events: none;
+  mix-blend-mode: screen;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.85);
+  transition: opacity 200ms ease;
+  z-index: 10;
+}
+
+/* Sparkle particles */
+.sparkle {
+  position: fixed;
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  pointer-events: none;
+  background: radial-gradient(circle, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.2) 70%, transparent 75%);
+  filter: blur(0.2px);
+  mix-blend-mode: screen;
+  z-index: 9;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .signup { grid-template-columns: 1fr; }
+  .signup button { width: 100%; }
+  .countdown { gap: 8px; }
+  .countdown .time span { font-size: 18px; }
+}
+
+@media (max-width: 420px) {
+  .brand { font-size: 18px; }
+  .title { font-size: 32px; }
+  .tagline { font-size: 15px; }
+}
+
+
